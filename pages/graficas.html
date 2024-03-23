@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../styles/graficas.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graficas</title>
+</head>
+
+<body>
+
+    <main class="principal">
+        <section class="contenido">
+            <header class="menu">
+                <nav class="menu-contenedor">
+                    <div class="menu-titulo">
+                        <p class="menu__titulo"><a href="acerca_de.html">Regresar</a></p>
+                    </div>
+                </nav>
+            </header>
+
+            <div class="contenido-derecha">
+                <!--
+                <div class="tarjetas">
+                    <div class="tarjeta tarjeta1">
+                        <div class="card-content">
+                            <div class="numero">334</div>
+                            <div class="nombre-tarjeta">Auto móviles</div>
+                        </div>
+
+                        <div class="icon-box">
+                            <i class="fa-solid fa-car"></i>
+                        </div>
+                    </div>
+                    <div class="tarjeta tarjeta2">
+                        <div class="card-content">
+                            <div class="numero">6</div>
+                            <div class="nombre-tarjeta">Marcas</div>
+                        </div>
+                        <div class="icon-box">
+                            <i class="fa-solid fa-tag"></i>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta tarjeta3">
+                        <div class="card-content">
+                            <div class="numero">15</div>
+                            <div class="nombre-tarjeta">Años</div>
+                        </div>
+                        <div class="icon-box">
+                            <i class="fa-solid fa-calendar-days"></i>
+                        </div>
+                    </div>
+                    <div class="tarjeta tarjeta4">
+                        <div class="card-content">
+                            <div class="numero">Km</div>
+                            <div class="nombre-tarjeta">Autonomia</div>
+
+                        </div>
+                        <div class="icon-box">
+                            <i class="fa-solid fa-wrench icono-card"></i>
+                        </div>
+                    </div>
+                </div>
+-->
+                <div class="graficas">
+                    <div class="chart">
+                        <h2 class="chart__titulo">Rango de edades</h2>
+                        <div class="grafi">
+                            <canvas id="myChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart">
+                        <h2 class="chart__titulo">% de casos de cancer de mama</h2>
+                        <div class="grafi">
+                            <canvas id="myChart2"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart">
+                        <h2 class="chart__titulo">Menopauisa</h2>
+                        <div class="grafi">
+                            <canvas id="myChart3"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart">
+                        <h2 class="chart__titulo">Relación tamaño del tumor vs número de ganglios</h2>
+                        <div class="grafi">
+                            <canvas id="myChart4"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart">
+                        <h2 class="chart__titulo">Tendencia de irradiación</h2>
+                        <div class="grafi">
+                            <canvas id="myChart5"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart">
+                        <h2 class="chart__titulo">Cancer de mama vs edad vs grado de malignidad</h2>
+                        <div class="grafi">
+                            <canvas id="myChart6"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://kit.fontawesome.com/1a5bcd4a97.js" crossorigin="anonymous"></script>
+    <script src="../js/graficas/graficas.js" type="module"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+
+</html>

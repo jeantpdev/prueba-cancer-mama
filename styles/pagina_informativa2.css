@@ -1,0 +1,271 @@
+@import url(global/global.css);
+
+h3 {
+    font-size: 1.5vw;
+}
+
+p {
+    font-size: 1.2vw;
+}
+
+li {
+    font-size: 1.2vw;
+}
+
+.hero {
+    display: grid;
+    grid-template-areas:
+        "menu"
+        "pagina-principal"
+        "footer";
+    grid-template-rows: auto 90vh auto;
+}
+
+.pagina-principal {
+    margin-top: 8vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-bottom: 5vh;
+
+}
+
+.principal-grilla {
+    display: grid;
+    grid-template-areas:
+        "imagen textos";
+    grid-template-columns: auto;
+    column-gap: 2vw;
+}
+
+.textos {
+    grid-area: textos;
+}
+
+.principal-imagen {
+    grid-area: imagen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.principal-grilla .principal-texto {
+    line-height: 30px;
+    padding: 0px 25px;
+    text-align: justify;
+    width: 45vw;
+    height: 70vh;
+    overflow-x: auto;
+}
+
+.principal-imagen .principal__imagen {
+    height: 56vh;
+    width: auto;
+}
+
+/* CONTENIDO MENU */
+
+.menu {
+    display: grid;
+    height: 10vh;
+    background-color: var(--negro);
+}
+
+.menu-contenedor {
+    display: grid;
+    grid-template-areas:
+        "titulo enlaces";
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
+.menu-titulo {
+    grid-area: titulo;
+}
+
+.menu-contenedor .menu-titulo .menu__titulo a {
+    font-size: 1.8vw;
+    font-weight: bold;
+    color: var(--blanco);
+    cursor: pointer;
+
+}
+
+.pagina-principal {
+    grid-area: pagina-principal;
+    margin-top: 5vh;
+    margin-right: 10vw;
+    margin-left: 10vw;
+    margin-bottom: 5vh;
+}
+
+.textos {
+    height: 80vh;
+    overflow-x: auto;
+    /* background-color: rgb(255, 255, 255); */
+    border-radius: 0.5vw;
+}
+
+.texto-contenedor {
+    display: grid;
+    row-gap: 2vh;
+}
+
+.texto-contenido {
+    display: grid;
+    row-gap: 4vh;
+    text-align: justify;
+    margin-right: 2vw;
+    padding: 1vw 1vw;
+}
+
+.texto-contenido .descripcion {
+    margin-left: 2vw;
+}
+
+.lista {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+/* CONTENIDO REDES */
+
+.footer {
+    grid-area: footer;
+    display: grid;
+    align-items: center;
+    height: 10vh;
+    background-color: var(--negro);
+}
+
+.contenido-redes {
+    padding: 0 5vw;
+    display: grid;
+    justify-items: center;
+    row-gap: 1vw;
+}
+
+.redes-texto p {
+    color: var(--blanco);
+    font-size: 0.9vw;
+}
+
+.redes-texto a {
+    color: var(--blanco);
+}
+
+@media only screen and (max-width: 600px) {
+
+    .hero {
+        display: grid;
+        grid-template-areas:
+            "menu"
+            "pagina-principal"
+            "footer";
+        grid-template-rows: auto;
+    }
+
+    /* CONTENIDO MENU */
+    .menu {
+        height: 20vh;
+    }
+
+    .menu-contenedor {
+        display: grid;
+        grid-template-areas:
+            "titulo";
+        margin-left: 5vw;
+        row-gap: 0vh;
+        align-items: center;
+    }
+
+    .menu-contenedor .menu-titulo .menu__titulo a {
+        font-size: 6vw;
+    }
+
+    /* CONTENIDO PRINCIPAL */
+
+    .pagina-principal {
+        margin: 0;
+    }
+
+    .principal-grilla {
+        display: grid;
+        grid-template-areas:
+            "textos"
+            "imagen";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+        column-gap: 0vw;
+        padding: 5vw;
+    }
+
+    .textos {
+        height: 80vh;
+        overflow-x: auto;
+    }
+
+    .texto-contenido {
+        display: grid;
+        row-gap: 4vh;
+        text-align: justify;
+        margin: 0;
+        padding: 0;
+    }
+
+    .texto .texto-contenido .titulo{
+        font-size: 5vw;
+    }
+
+    .texto .texto-contenido .descripcion{
+        font-size: 4vw;
+    }
+
+    .texto .texto-contenido .lista li{
+        font-size: 4vw;
+    }
+
+    .principal-imagen .principal__imagen {
+        height: 40vh;
+        width: auto;
+    }
+
+    /* CONTENIDO REDES */
+
+    .footer {
+        display: grid;
+        align-items: center;
+        height: 20vh;
+        background-color: #191919;
+    }
+
+    .contenido-redes {
+        padding: 0;
+        row-gap: 3vh;
+    }
+
+    .redes-tarjetas {
+        display: flex;
+        justify-content: center;
+        column-gap: 5vw;
+    }
+
+    .redes-tarjetas .tarjeta {
+        display: grid;
+        align-items: center;
+    }
+
+    .redes-tarjetas .tarjeta-icono i {
+        font-size: 8vw;
+        color: aliceblue;
+    }
+
+    .redes-texto p {
+        font-size: 3.5vw;
+    }
+
+}

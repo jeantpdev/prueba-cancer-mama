@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/pagina_informativa.css">
+    <link rel="shortcut icon" href="../imagenes/cancer.png" type="image/x-icon">
+    <title>Principal</title>
+</head>
+
+<body>
+
+    <div class="hero">
+        <header class="menu">
+            <nav class="menu-contenedor">
+                <div class="menu-titulo">
+                    <p class="menu__titulo"><a href="acerca_de.html">Regresar</a></p>
+                </div>
+            </nav>
+        </header>
+
+        <section class="pagina-principal">
+
+            <div class="principal-grilla">
+                <div class="indice">
+                    <nav class="indice-contenedor">
+                        <ul class="indice-lista">
+                            <li class="indice__item"><a href="#data-info">Data</a></li>
+                            <li class="indice__item"><a href="#kn-vecinos">KN-Vecinos</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="textos">
+                    <div class="texto-contenedor">
+
+                        <section class="texto" id="data-info">
+                            <div class="texto-contenido">
+                                <h1 class="titulo">Titulo: Cancer de mama</h1>
+                                <h3 class="titulo">Información relevante</h3>
+                                <p class="descripcion">This is one of three domains provided by the Oncology Institute
+                                    that has repeatedly appeared in the machine learning literature.
+                                    (See also lymphography and primary-tumor.)
+
+                                    This data set includes 201 instances of one class and 85 instances of
+                                    another class. The instances are described by 9 attributes, some of
+                                    which are linear and some are nominal.</p>
+                                <h3 class="titulo">Numero de instancias</h3>
+                                <p class="descripcion">286</p>
+                                <h3 class="titulo">Informacion de los atributos</h3>
+
+                                <ul class="lista">
+                                    <li>1. Class: no-recurrence-events, recurrence-events.</li>
+
+                                    <li>2. age: 10-19, 20-29, 30-39, 40-49, 50-59, 60-69, 70-79, 80-89, 90-99.</li>
+
+                                    <li>3. menopause: lt40, ge40, premeno.</li>
+
+                                    <li>4. tumor-size: 0-4, 5-9, 10-14, 15-19, 20-24, 25-29, 30-34, 35-39, 40-44, 45-49,
+                                        50-54, 55-59.</li>
+
+                                    <li>5. inv-nodes: 0-2, 3-5, 6-8, 9-11, 12-14, 15-17, 18-20, 21-23, 24-26, 27-29,
+                                        30-32, 33-35, 36-39.</li>
+
+                                    <li>6. node-caps: yes, no.</li>
+
+                                    <li>7. deg-malig: 1, 2, 3.</li>
+
+                                    <li>8. breast: left, right.</li>
+
+                                    <li>9. breast-quad: left-up, left-low, right-up, right-low, central.</li>
+                                    <li>10. irradiat: yes, no.</li>
+
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="texto" id="kn-vecinos">
+
+                            <div class="texto-contenido">
+                                <h3 class="titulo">¿Qué es KN-Vecinos?</h3>
+                                <p class="descripcion">
+                                    Es un método que simplemente busca en las observaciones más cercanas a la que se
+                                    está
+                                    tratando de predecir y clasifica el punto de interés basado en la mayoría de datos
+                                    que
+                                    le rodean. Como dijimos antes, es un algoritmo:
+                                </p>
+                                <ul class="lista">
+                                    <li>
+                                        <p>
+                                            Supervisado: esto -brevemente- quiere decir que tenemos etiquetado nuestro
+                                            conjunto de datos de entrenamiento, con la clase o resultado esperado dada
+                                            “una
+                                            fila” de datos.
+                                        </p>
+
+                                    </li>
+
+                                    <li>
+                                        <p>
+                                            Basado en Instancia: Esto quiere decir que nuestro algoritmo no aprende
+                                            explícitamente un modelo (como por ejemplo en Regresión Logística o árboles
+                                            de
+                                            decisión). En cambio memoriza las instancias de entrenamiento que son usadas
+                                            como “base de conocimiento” para la fase de predicción.
+                                        </p>
+                                    </li>
+                                </ul>
+                                <h3 class="titulo">¿Cómo funciona KN-Vecinos?</h3>
+
+                                <ul class="lista">
+                                    <li>1. Calcular la distancia entre el item a clasificar y el resto de items del
+                                        dataset de entrenamiento.</li>
+
+                                    <li>2. Seleccionar los “k” elementos más cercanos (con menor distancia, según la
+                                        función que se use).</li>
+
+                                    <li>3. Realizar una “votación de mayoría” entre los k puntos: los de una
+                                        clase/etiqueta que dominen decidirán su clasificación final.</li>
+                                </ul>
+
+                                <p class="descripcion">
+                                    Teniendo en cuenta el punto 3, veremos que para decidir la clase de un punto es muy
+                                    importante el valor de k, pues este terminará casi por definir a qué grupo
+                                    pertenecerán los puntos, sobre todo en las “fronteras” entre grupos. Por ejemplo -y
+                                    a priori- yo elegiría valores impares de k para desempatar (si las features que
+                                    utilizamos son pares). No será lo mismo tomar para decidir 3 valores que 13. Esto no
+                                    quiere decir que necesariamente tomar más puntos implique mejorar la precisión. Lo
+                                    que es seguro es que cuantos más “puntos k”, más tardará nuestro algoritmo en
+                                    procesar y darnos respuesta. <br><br>
+
+                                    Las formas más populares de “medir la cercanía” entre puntos son la distancia
+                                    Euclidiana (la “de siempre”) o la Cosine Similarity (mide el ángulo de los vectores,
+                                    cuanto menores, serán similares). Recordemos que este algoritmo -y prácticamente
+                                    todos en ML- funcionan mejor con varias características de las que tomemos datos
+                                    (las columnas de nuestro dataset). Lo que entendemos como “distancia” en la vida
+                                    real, quedará abstracto a muchas dimensiones que no podemos “visualizar” fácilmente
+                                    (como por ejemplo en un mapa).
+                                </p>
+
+
+                            </div>
+
+                        </section>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <footer class="footer">
+            <div class="contenido-redes">
+
+                <div class="redes-texto">
+                    <p class="redes__texto">© Diseño inspirado en <a data-target="_blank"
+                            href="https://github.com/adityatelange/hugo-PaperMod/">Paper Mod</a></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://kit.fontawesome.com/1a5bcd4a97.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

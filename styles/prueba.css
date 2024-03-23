@@ -1,0 +1,174 @@
+@import url(global/global.css);
+
+
+h3 {
+    font-size: 1.5vw;
+}
+
+
+.hero {
+    display: grid;
+    grid-template-areas:
+        "menu"
+        "pagina-principal";
+    grid-template-rows: auto 80vh;
+}
+
+.pagina-principal {
+    grid-area: pagina-principal;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    display: grid;
+    align-items: center;
+}
+
+
+.principal-grilla .container {
+    display: grid;
+
+}
+
+.principal-grilla .container .izquierda{
+    grid-area: izquierda;
+    text-align: center;
+    row-gap: 5vh;
+    display: grid;
+}
+
+.principal-grilla .container .izquierda .izquierda-grilla{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 3vh;
+    column-gap: 2vw;
+    height: auto;
+    justify-content: center;
+}
+
+.principal-grilla .container .derecha{
+    grid-area: derecha;
+}
+
+.principal-grilla .container .izquierda button {
+    color: var(--blanco);
+    padding: 0.5vw 3vw;
+    background-color: var(--pink);
+    cursor: pointer;
+    border-radius: 0.5vw;
+    border-color: transparent;
+}
+
+.principal-grilla .container select {
+    width: 20vw;
+    height: 5vh;
+    border-radius: 0.3vw;
+}
+
+/* CONTENIDO MENU */
+
+.menu {
+    display: grid;
+    height: 10vh;
+    background-color: var(--negro);
+}
+
+.menu-contenedor {
+    display: grid;
+    grid-template-areas:
+        "titulo enlaces";
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
+.menu-titulo {
+    grid-area: titulo;
+}
+
+.menu-contenedor .menu-titulo .menu__titulo a {
+    font-size: 1.8vw;
+    font-weight: bold;
+    color: var(--blanco);
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    h1, h2{
+        font-size: 6vw;
+    }
+
+    .hero {
+        display: grid;
+        grid-template-areas:
+            "menu"
+            "pagina-principal";
+        grid-template-rows: auto auto;
+    }
+
+    /* CONTENIDO MENU */
+    .menu {
+        height: 20vh;
+    }
+
+    .menu-contenedor {
+        display: grid;
+        grid-template-areas:
+            "titulo";
+        margin-left: 5vw;
+        row-gap: 0vh;
+        align-items: center;
+    }
+
+    .menu-contenedor .menu-titulo .menu__titulo a{
+        font-size: 8vw;
+    }
+
+    .pagina-principal {
+        margin: 10vh 15vw;
+    }
+    
+
+    .principal-grilla .container {
+        display: grid;
+        grid-template-areas: 
+        "izquierda"
+        "derecha";
+        grid-template-rows: 1fr;
+    }
+
+
+    .principal-grilla .container .izquierda .izquierda-grilla{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        height: auto;
+    }
+
+    .principal-grilla .container select {
+        width: 70vw;
+        height: 5vh;
+        border-radius: 0.3vw;
+    }
+
+    .principal-grilla .container .izquierda .izquierda-grilla .combobox, h3{
+        font-size: 5vw;
+        font-weight: 500;
+    }
+
+    .principal-grilla .container .izquierda button {
+        color: var(--blanco);
+        padding: 2vw 10vw;
+        background-color: var(--pink);
+        font-size: 5vw;
+        border-radius: 1vw;
+    }
+
+    .principal-grilla .container .izquierda .boton{
+        display: flex;
+        flex-direction: column;
+        row-gap: 3vh;
+    }
+
+}

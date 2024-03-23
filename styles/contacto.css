@@ -1,0 +1,321 @@
+@import url(global/global.css);
+
+a {
+    cursor: pointer;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}
+
+body {
+    background-color: var(--blanco);
+}
+
+.hero {
+    display: grid;
+    grid-template-areas:
+        "menu"
+        "formulario"
+        "footer";
+    grid-template-rows: auto 80vh auto;
+}
+
+/* CONTENIDO MENU */
+
+.menu {
+    grid-area: menu;
+    display: grid;
+    height: 10vh;
+    background-color: var(--negro);
+}
+
+.menu-contenedor {
+    display: grid;
+    grid-template-areas:
+        "titulo enlaces";
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
+.menu-titulo {
+    grid-area: titulo;
+}
+
+.menu-contenedor .menu-titulo .menu__titulo {
+    font-size: 1.8vw;
+    font-weight: bold;
+}
+
+.menu-lista {
+    grid-area: enlaces;
+}
+
+.menu-contenedor .menu-lista {
+    display: flex;
+}
+
+.menu-contenedor .menu-titulo .menu__titulo {
+    color: var(--blanco);
+}
+
+.menu-contenedor .menu-lista .menu__item {
+    color: var(--blanco);
+}
+
+.menu-contenedor .menu-lista .menu__item a {
+    font-size: 1.5vw;
+    margin-left: 2vw;
+    color: var(--blanco);
+}
+
+.menu-contenedor .menu-lista .menu__item a:hover {
+    color: var(--pink);
+}
+
+.menu-contenedor .menu-lista .menu__item--active a {
+    font-weight: bold;
+    border-bottom: 1px solid var(--pink);
+    color: var(--pink);
+}
+
+/* CONTENIDO FORMULARIO */
+
+.formulario {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.formulario .formulario-grilla {
+    display: grid;
+    grid-template-areas: "informacion contenido";
+    grid-template-columns: 30vw auto;
+    column-gap: 2vw;
+    height: auto;
+    width: 70vw;
+    padding: 2vw;
+    color: var(--negro);
+    border-radius: 0.5vw;
+}
+
+.formulario-grilla .informacion {
+    grid-area: informacion;
+    display: grid;
+    height: 20vh;
+}
+
+.formulario-grilla .informacion .informacion__descripcion {
+    font-size: 1.3vw;
+}
+
+.formulario .formulario-grilla .tarjeta {
+    grid-area: contenido;
+    display: grid;
+    grid-template-areas:
+        "entradas"
+        "boton";
+    row-gap: 2vh;
+}
+
+.formulario .formulario-grilla .tarjeta .tarjeta-entradas {
+    grid-area: entradas;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+}
+
+.formulario .formulario-grilla .tarjeta .tarjeta-entradas input {
+    height: 3vh;
+    background-color: var(--blanco);
+    border: transparent;
+    border-bottom: 1px solid #191919;
+    font-size: 1.3vw;
+    margin-bottom: 1vh;
+}
+
+.formulario .formulario-grilla .tarjeta .tarjeta-entradas input:focus {
+    outline: none;
+}
+
+.formulario .formulario-grilla .tarjeta .tarjeta-entradas textarea {
+    height: 3vh;
+    background-color: var(--blanco);
+    border: transparent;
+    border-bottom: 1px solid #191919;
+    font-size: 1.3vw;
+}
+
+.formulario .formulario-grilla .tarjeta .tarjeta-entradas textarea:focus {
+    outline: none;
+}
+
+.formulario .formulario-grilla .tarjeta .tarjeta-boton {
+    display: grid;
+    justify-content: end;
+    grid-area: boton;
+}
+
+.formulario .formulario-grilla .tarjeta .tarjeta-boton a {
+    color: var(--blanco);
+    padding: 0.5vw 5vw;
+    border-radius: 0.5vw;
+    background-color: var(--pink);
+}
+
+/* CONTENIDO REDES */
+
+.footer {
+    grid-area: footer;
+    display: grid;
+    align-items: center;
+    height: 10vh;
+    background-color: var(--negro);
+}
+
+.contenido-redes {
+    padding: 0 5vw;
+    display: grid;
+    justify-items: center;
+    row-gap: 1vw;
+}
+
+.redes-texto p {
+    color: var(--blanco);
+    font-size: 0.9vw;
+}
+
+.redes-texto a {
+    color: var(--blanco);
+}
+
+@media only screen and (max-width: 600px) {
+
+    /* CONTENIDO HERO */
+    .hero {
+        display: grid;
+        grid-template-areas:
+            "menu"
+            "formulario"
+            "footer";
+        grid-template-rows: auto 1fr auto;
+        grid-template-columns: 1fr;
+    }
+
+
+    /* CONTENIDO MENU */
+    .menu {
+        height: 20vh;
+    }
+
+    .menu-contenedor {
+        display: grid;
+        grid-template-areas:
+            "titulo"
+            "enlaces";
+        margin: auto;
+        row-gap: 0vh;
+    }
+
+    .menu-contenedor .menu-titulo .menu__titulo {
+        font-size: 8vw;
+    }
+
+    .menu-contenedor .menu-lista .menu__item a {
+        font-size: 5vw;
+        margin-left: 3vw;
+    }
+
+    /* CONTENIDO FORMULARIO */
+
+    .formulario .formulario-grilla {
+        display: grid;
+        grid-template-areas:
+            "informacion"
+            "contenido";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        column-gap: 0;
+        row-gap: 5vh;
+        padding: 5vw;
+        width: auto;
+        color: var(--negro);
+        border-radius: 0.5vw;
+    }
+
+    
+
+    .formulario-grilla .informacion {
+        grid-area: informacion;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .formulario-grilla .informacion .informacion__descripcion {
+        font-size: 4vw;
+    }
+
+    .formulario .formulario-grilla .tarjeta .tarjeta-entradas input {
+        height: 3vh;
+        background-color: var(--blanco);
+        border: transparent;
+        border-bottom: 1px solid #191919;
+        font-size: 4vw;
+        margin-bottom: 1vh;
+    }
+
+    .formulario .formulario-grilla .tarjeta .tarjeta-entradas {
+        font-size: 4vw;
+    }
+
+    .formulario .formulario-grilla .tarjeta .tarjeta-entradas textarea {
+        font-size: 3.5vw;
+    }
+
+    .formulario .formulario-grilla .tarjeta .tarjeta-boton a {
+        color: var(--blanco);
+        padding: 2vw 10vw;
+        background-color: var(--pink);
+        font-size: 5vw;
+    }
+
+
+
+    /* CONTENIDO REDES */
+
+    .footer {
+        display: grid;
+        align-items: center;
+        height: 20vh;
+    }
+
+    .contenido-redes {
+        padding: 0;
+        row-gap: 3vh;
+    }
+
+    .redes-tarjetas {
+        display: flex;
+        justify-content: center;
+        column-gap: 5vw;
+    }
+
+    .redes-tarjetas .tarjeta {
+        display: grid;
+        align-items: center;
+    }
+
+    .redes-tarjetas .tarjeta-icono i {
+        font-size: 8vw;
+        color: aliceblue;
+    }
+
+    .redes-texto p {
+        font-size: 3.5vw;
+    }
+
+}

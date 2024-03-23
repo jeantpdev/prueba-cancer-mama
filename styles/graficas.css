@@ -1,0 +1,295 @@
+@import url(global/global.css);
+
+* {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.principal {
+  height: 100vh;
+  display: grid;
+}
+
+.contenido {
+  display: grid;
+  grid-template-areas:
+    "menu"
+    "graficas";
+  grid-template-rows: auto auto;
+}
+
+/* CONTENIDO MENU */
+.menu {
+  display: grid;
+  height: 10vh;
+  background-color: var(--negro);
+}
+
+.menu-contenedor {
+  display: grid;
+  grid-template-areas:
+    "titulo enlaces";
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 15vw;
+  margin-right: 15vw;
+}
+
+.menu-titulo {
+  grid-area: titulo;
+}
+
+.menu-contenedor .menu-titulo .menu__titulo a {
+  font-size: 1.8vw;
+  font-weight: bold;
+  color: var(--blanco);
+  cursor: pointer;
+}
+
+/* FIN MENU*/
+
+.contenido-derecha {
+  display: grid;
+  grid-area: graficas;
+  height: 95vh;
+  border-radius: 0.5vw;
+  row-gap: 2vw;
+}
+
+.tarjetas {
+  display: grid;
+  padding: 10px 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.tarjetas .tarjeta {
+  padding: 1.2vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 0.5vw;
+  box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.08);
+}
+
+.numero {
+  font-size: 2vw;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+
+.nombre-tarjeta {
+  color: #00000088;
+  font-weight: 600;
+  font-size: 1vw;
+}
+
+.icon-box i {
+  font-size: 3vw;
+  color: #030303
+}
+
+.grafi {
+  display: flex;
+  height: 40vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.chart {
+  padding: 1.5vw;
+  border-radius: 0.5vw;
+  box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.08);
+  width: 35vw;
+  height: 45vh;
+}
+
+.chart__titulo {
+  text-align: center;
+  font-size: 1.8vw;
+}
+
+.graficas {
+  display: flex;
+  gap: 4vw;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* RESPONSIVE*/
+@media only screen and (max-width: 600px) {
+
+  .contenido {
+    display: grid;
+    grid-template-areas:
+      "navegacion"
+      "contenido";
+    grid-template-rows: 10vh auto;
+    grid-template-columns: 1fr;
+  }
+
+  .menu {
+    grid-area: navegacion;
+    position: static;
+    margin: 0;
+  }
+
+  .contenido-derecha {
+    display: grid;
+    grid-area: contenido;
+    grid-template-areas:
+      "tarjetas"
+      "graficos";
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .tarjetas {
+    grid-area: tarjetas;
+  }
+
+  .charts {
+    grid-area: graficos;
+  }
+
+  .menu_contenedor {
+    background-color: #131417;
+    border-radius: 1vw;
+    display: flex;
+    height: 8vh;
+    width: 100vw;
+  }
+
+  .menu-contenedor .menu-titulo .menu__titulo a {
+    font-size: 4.8vw;
+    font-weight: bold;
+    color: var(--blanco);
+    cursor: pointer;
+  }
+
+
+  .iconos {
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icono-menu,
+  .icono-menu-2,
+  .icono-menu-3,
+  .icono-menu-4 {
+    margin: 0;
+    padding: 12px;
+
+  }
+
+  .icono-menu-5 {
+    margin-top: 0vh;
+    padding: 12px;
+  }
+
+  .tarjetas {
+    display: grid;
+    grid-template-areas:
+      "card1 card2"
+      "card3 card4";
+    padding: 0;
+    grid-gap: 0;
+    place-self: center;
+    grid-template-columns: 1fr;
+
+
+  }
+
+  .tarjeta1 {
+    grid-area: card1;
+    width: 36vw;
+    height: 8vh;
+
+
+  }
+
+  .tarjeta2 {
+    grid-area: card2;
+    width: 36vw;
+    height: 8vh;
+
+  }
+
+  .tarjeta3 {
+    grid-area: card3;
+    width: 36vw;
+    height: 8vh;
+
+  }
+
+  .tarjeta4 {
+    grid-area: card4;
+    width: 36vw;
+    height: 8vh;
+
+  }
+
+  .nombre-tarjeta {
+    color: #00000088;
+    font-weight: 600;
+    font-size: 3vw;
+  }
+
+  .tarjeta {
+    display: grid;
+    grid-template-areas:
+      "contenido" "icono";
+    margin: 10px;
+  }
+
+  .card-content {
+    grid-area: contenido;
+  }
+
+  .icon-box {
+    grid-area: icono;
+  }
+
+  .numero {
+    font-size: 5vw;
+  }
+
+  .icon-box i {
+    font-size: 6vw;
+  }
+
+  .charts {
+    display: flex;
+
+  }
+
+  .chart {
+    padding: 1.5vw;
+    border-radius: 0.5vw;
+    box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.08);
+    width: 80vw;
+    height: 33vh;
+    margin-top: 20px;
+  }
+
+  .chart__titulo {
+    font-size: 3.8vw;
+  }
+
+  .grafi {
+    height: 28vh;
+  }
+
+  .graficas {
+    display: flex;
+    gap: 4vw;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+}

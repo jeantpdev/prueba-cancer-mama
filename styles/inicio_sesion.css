@@ -1,0 +1,121 @@
+@import url(global/global.css);
+
+body {
+    color: var(--blanco);
+}
+
+.pagina-grilla {
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 100vh;
+    align-items: center;
+    background-color: beige;
+}
+
+.contenedor-formulario {
+    display: grid;
+    grid-template-areas:
+        "imagen"
+        "titulo"
+        "entradas"
+        "boton";
+    row-gap: 2vh;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--negro);
+    padding: 3vw;
+    border-radius: 3%;
+
+}
+
+.formulario-imagen {
+    display: grid;
+    grid-area: imagen;
+    justify-content: center;
+}
+
+.formulario__imagen {
+    height: 20vh;
+    width: auto;
+    border-radius: 50%;
+}
+
+.formulario-titulo {
+    grid-area: titulo;
+}
+
+.formulario-entradas {
+    display: flex;
+    text-align: start;
+    grid-area: entradas;
+    flex-direction: column;
+    row-gap: 2vh;
+}
+
+.formulario-entradas input {
+    padding: 0 1vw;
+    width: 25vw;
+    height: 7vh;
+    /* border: transparent; */
+}
+
+.formulario-boton {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+    justify-items: center;
+    grid-area: boton;
+    align-items: center;
+}
+
+.formulario-boton .formulario__boton {
+    height: 7vh;
+    width: 20vw;
+    border: transparent;
+    background-color: var(--pink);
+    border-radius: 0.5vw;
+    cursor: pointer;
+
+}
+
+.formulario-boton .formulario__boton a {
+    font-weight: 500;
+    font-size: 1.2vw;
+    text-transform: uppercase;
+    color: var(--blanco);
+}
+
+@media only screen and (max-width: 600px) {
+
+    .contenedor-formulario {
+        width: 80vw;
+        height: 80vh;
+    }
+
+    .formulario-entradas {
+        font-size: 4vw;
+    }
+
+    .formulario-entradas input {
+        padding: 0 1vw;
+        width: 60vw;
+        height: 7vh;
+        /* border: transparent; */
+    }
+
+    .formulario-boton .formulario__boton {
+        height: 6vh;
+        width: auto;
+        background-color: var(--pink);
+        border-radius: 0.5vw;
+    }
+
+    .formulario-boton .formulario__boton a {
+        color: var(--blanco);
+        padding: 2vw 10vw;
+        font-size: 5vw;
+        text-transform: none;
+        font-weight: 500;
+    }
+
+}

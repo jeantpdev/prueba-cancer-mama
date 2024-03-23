@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/inicio_sesion.css">
+    <link rel="shortcut icon" href="../img/cancer.png" type="image/x-icon">
+    <title>Inicio de sesión</title>
+</head>
+
+<body>
+
+    <div class="pagina-inicio-sesion">
+        <div class="pagina-grilla">
+            <div class="contenido-formulario">
+                <div class="contenedor-formulario">
+                    <div class="formulario-imagen">
+                        <img src="../img/user_profile.jpg" alt="" class="formulario__imagen">
+                    </div>
+                    <div class="formulario-titulo">
+                        <h1 class="formulario__titulo">Bienvenido</h1>
+                    </div>
+                    <div id="login-form" class="formulario-entradas">
+                        <label for="username">Nombre de usuario</label>
+                        <input type="text" id="username" name="username">
+                        <label for="password">Contraseña</label>
+                        <input type="password" id="password" name="password">
+                        <div class="formulario-boton">
+                            <button id="botonIniciarSesion" class="formulario__boton"><a>Iniciar sesión</a></button>
+                            <button id="botonRetroceder" class="formulario__boton"><a>Regresar</a></button>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/inicio_sesion.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,344 @@
+@import url(../global/global.css);
+
+a {
+    cursor: pointer;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+
+}
+
+select,
+input {
+    width: 10vw;
+    height: 5vh;
+}
+
+
+.hero {
+    display: grid;
+    grid-template-areas:
+        "menu"
+        "pagina-principal"
+        "insertar-datos"
+        "footer";
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+
+}
+
+.menu {
+    grid-area: menu;
+    display: grid;
+    height: 10vh;
+    background-color: var(--negro);
+}
+
+.menu-contenedor {
+    display: grid;
+    grid-template-areas:
+        "titulo enlaces";
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
+.menu-titulo {
+    grid-area: titulo;
+}
+
+.menu-contenedor .menu-titulo .menu__titulo {
+    font-size: 1.8vw;
+    font-weight: bold;
+}
+
+.menu-lista {
+    grid-area: enlaces;
+}
+
+.menu-contenedor .menu-lista {
+    display: flex;
+}
+
+.menu-contenedor .menu-titulo .menu__titulo {
+    color: var(--blanco);
+}
+
+.menu-contenedor .menu-lista .menu__item {
+    color: var(--blanco);
+}
+
+.menu-contenedor .menu-lista .menu__item a {
+    font-size: 1.5vw;
+    margin-left: 2vw;
+    color: var(--blanco);
+}
+
+.menu-contenedor .menu-lista .menu__item a:hover {
+    color: var(--pink);
+}
+
+.menu-contenedor .menu-lista .menu__item--active a {
+    font-weight: bold;
+    border-bottom: 1px solid var(--pink);
+    color: var(--pink);
+}
+
+.pagina-principal {
+    grid-area: pagina-principal;
+}
+
+.pagina-principal {
+    margin-right: 10vw;
+    margin-left: 10vw;
+    margin-bottom: 5vh;
+
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "botones"
+        "tabla"
+        "paginacion";
+}
+
+.botones {
+    display: flex;
+    flex-direction: row;
+    grid-area: botones;
+}
+
+.botones .boton-cantidad-datos-mostrar,
+.boton-eliminar,
+.boton-busqueda,
+.boton-actualizar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1vw;
+    column-gap: 1vw;
+}
+
+.tabla-tickets {
+    grid-area: tabla;
+    overflow-x: auto;
+}
+
+.tabla-paginacion {
+    grid-area: paginacion;
+    display: grid;
+    place-content: center;
+}
+
+.tabla-tickets .tabla__tickets {
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+    height: 60vh;
+}
+
+.pagina-principal button, .insertar-datos button {
+    display: inline-block;
+    padding: 10px 18px;
+    background-color: var(--pink);
+    color: var(--blanco);
+    text-decoration: none;
+    border: 1px solid var(--pink);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0.5vw;
+    border-radius: 0.5vw;
+}
+
+/*TABLA*/
+/* Estilo para la tabla */
+
+#tablaTickets {
+    grid-area: tabla;
+}
+
+#tablaTickets {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+#tablaTickets th,
+#tablaTickets td {
+    padding: 0.5vw;
+}
+
+#tablaTickets th {
+    background-color: var(--pink);
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+#tablaTickets tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+
+/* Estilo para los botones de paginación */
+.pagination-button {
+    display: inline-block;
+    padding: 10px 18px;
+    background-color: var(--pink);
+    color: var(--blanco);
+    text-decoration: none;
+    border: 1px solid var(--pink);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0.5vw;
+    border-radius: 0.5vw;
+}
+
+.pagination-button:hover {
+    background-color: #ddd;
+}
+
+.pagination-button.active {
+    background-color: #333;
+    color: #fff;
+}
+
+.insertar-datos {
+    grid-area: insertar-datos;
+    display: grid;
+    grid-template-areas:
+        "titulo titulo"
+        "izquierda derecha";
+
+    justify-content: center;
+    margin-bottom: 10vh;
+}
+
+.datos-titulo {
+    grid-area: titulo;
+}
+
+.insertar-datos .izquierda {
+    width: 15vw;
+    grid-area: izquierda;
+    text-align: center;
+    row-gap: 5vh;
+    display: grid;
+}
+
+.insertar-datos .derecha {
+    grid-area: derecha;
+    width: 63vw;
+}
+
+.insertar-datos .izquierda .izquierda-grilla {
+    display: grid;
+    justify-content: center;
+}
+
+.insertar-datos .izquierda-grilla .combobox {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    font-size: 1vw;
+}
+
+.insertar-datos .izquierda button {
+    color: var(--blanco);
+    padding: 0.5vw 3vw;
+    background-color: var(--pink);
+    cursor: pointer;
+    border-radius: 0.5vw;
+    border-color: transparent;
+}
+
+
+/*TABLA*/
+/* Estilo para la tabla */
+
+#tablaDatos {
+    grid-area: tabla;
+}
+
+#tablaDatos {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+#tablaDatos th,
+#tablaDatos td {
+    padding: 0.5vw;
+    font-size: 1vw;
+}
+
+#tablaDatos th {
+    background-color: var(--pink);
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+#tablaDatos tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.tabla-datos {
+    grid-area: tabla;
+    overflow-x: auto;
+}
+
+
+.tabla-paginacion {
+    grid-area: paginacion;
+    display: grid;
+    justify-content: end;
+}
+
+.tabla-datos .tabla__datos {
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+    height: 50vh;
+}
+
+.tabla-datos .tabla__datos tr th {
+    padding: 0.3vw;
+
+}
+
+.tabla-datos .tabla__datos tr td {
+    word-wrap: break-word;
+}
+
+.botones select, input{
+    width: 5vw;
+}
+
+/* CONTENIDO REDES */
+
+.footer {
+    grid-area: footer;
+    display: grid;
+    align-items: center;
+    height: 10vh;
+    background-color: var(--negro);
+}
+
+.contenido-redes {
+    padding: 0 5vw;
+    display: grid;
+    justify-items: center;
+    row-gap: 1vw;
+}
+
+.redes-texto p {
+    color: var(--blanco);
+    font-size: 0.9vw;
+}
+
+.redes-texto a {
+    color: var(--blanco);
+}

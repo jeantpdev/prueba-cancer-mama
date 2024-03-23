@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/contacto.css">
+    <link rel="shortcut icon" href="../img/cancer.png" type="image/x-icon">
+    <title>Contáctanos</title>
+</head>
+
+<body>
+
+    <div class="hero">
+        <header class="menu">
+            <nav class="menu-contenedor">
+                <ul class="menu-lista" id="menuLista">
+                    <li class="menu__item"><a href="../index.html">Inicio</a></li>
+                    <li class="menu__item"><a href="acerca_de.html">Acerca de</a></li>
+                    <li class="menu__item menu__item--active"><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="formulario">
+            <div class="formulario-grilla">
+                <div class="informacion">
+                    <div class="informacion-titulo">
+                        <h1 class="informacion__titulo">Contáctanos</h1>
+                    </div>
+                    <div class="informacion-descripcion">
+                        <p class="informacion__descripcion">¿Tienes alguna duda? contácta con la administración. Solo llena el siguiente formulario con tus datos y un adminstrador te contactará.</p>
+                    </div>
+
+                </div>
+                <div class="tarjeta">
+                    <div class="tarjeta-entradas">
+                        <label>Nombre</label>
+                        <input type="text" id="nombre">
+                        <label>Apellido</label>
+                        <input type="text" id="apellido">
+                        <label>Correo</label>
+                        <input type="text" id="correo">
+                        <label>Titulo</label>
+                        <input type="text" id="titulo">
+                        <label>Descripción</label>
+                        <textarea name="" id="descripcion" cols="20" rows="10"></textarea>
+                    </div>
+                    <div class="tarjeta-boton">
+                        <a id="botonEnviar">Enviar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="contenido-redes">
+
+                <div class="redes-texto">
+                    <p class="redes__texto">© Diseño inspirado en <a data-target="_blank"
+                            href="https://github.com/adityatelange/hugo-PaperMod/">Paper Mod</a></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/contacto/contacto.js" type="module"> </script>
+    
+</body>
+
+</html>
